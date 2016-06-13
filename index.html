@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<title>My_maps</title>
+	<!-- <script type="text/javascript" src="geolocalisation.js"></script> -->
+</head>
+<body onload='initialize()'>
+	<div id="map_canvas"></div>
+	<button id="reduce">Réduire</button>
+	<button id="moins">-</button>
+	<button id="plus">+</button>
+	<div id="destinationForm">
+		<h1>My Maps !</h1>
+		<h2>Choisissez votre trajet :</h2>
+	<button id="fullscreen">FullScreen</button>
+		<form action="" method="get" name="direction" id="direction">
+			<div class="div_direction">
+				<label>Point de départ :</label>
+				<input type="text" name="start" id="start">
+				<label>Destination :</label>
+				<input type="text" name="end" id="end">
+				<label>Type de course</label>
+				<select name="styleofrun" size="1" id="styleofrun">
+					<option value="DRIVING">Voiture</option>
+					<option value="BICYCLING">Vélo</option>
+					<option value="WALKING">Marche</option>
+				</select>
+				<p><input type="button" id="road" value="C'est parti !"></p>
+			</div>
+		</form>
+		<form action="" method="get" name="direction" id="direction">
+			<div class="div_direction">
+				<select name="whatfound" size="1" id="whatfound">
+					<option value="null">---</option>
+					<option value="monument">Monuments</option>
+					<option value="bar">Bars</option>
+					<option value="restaurant">Restaurants</option>
+					<option value="hotel">Hôtels</option>
+					<option value="park">Parcs publics</option>
+					<option value="centre commercial">Centres commerciaux</option>
+					<option value="détente">Détente/Bien-être</option>
+				</select>
+				<select name="kilometers" size="1" id="kilometers">
+					<option value="5000">5km</option>
+					<option value="10000">10km</option>
+					<option value="15000">15km</option>
+					<option value="20000">20km</option>
+					<option value="25000">25km</option>
+					<option value="30000">30km</option>
+					<option value="35000">35km</option>
+					<option value="40000">40km</option>
+					<option value="45000">45km</option>
+					<option value="50000">50km</option>
+				</select>
+				<p><input type="button" id="activities" value="Rechercher"></p>
+			</div>
+		</form>
+		<div id="panel"></div>
+	</div>
+</body>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
+<script type="text/javascript" src="maps.js"></script>
+</html>
